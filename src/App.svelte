@@ -12,7 +12,7 @@
 
 	const getMovies = async () => {
 		try {
-			const protocol = window.location.protocol === 'https' ? 'https' : 'http'
+			const protocol = 'https'
 			const response = await fetch(`${protocol}://omdbapi.com/?s=${query}&apikey=${API_KEY}&plot=full`)
 			const dataJSON = await response.json()
 			
